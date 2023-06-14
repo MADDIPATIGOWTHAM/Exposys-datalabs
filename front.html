@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="new.css">   
+
+</head>
+<body>
+  <div id="intro">
+    <h1>Welcome to my internship project from Exposys Data labs</h1>
+  </div>
+  <div id="heading"><h1>Mass Mail Dispatcher</h1></div>
+  <section id="full">    
+  <div class="container">    
+    <div id="frm">
+    <form method="post">
+        <label for="senderEmail">From:</label><br>
+        <input type="email" id="senderEmail" name="senderMail" required>
+        <br><br><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject"name="subject" required>
+        <br><br><br>
+        <label for="csvFile">CSV File:</label><br>
+        <input type="file" name="csvFile" id="csvFile" accept=".csv" >
+        <br><br>
+        <label for="message">Message:</label><br>
+        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        <br><br>
+        <input type="button" value="Send Emails" onclick="sendEmails()">
+        <br></form></div>
+        <div >
+        <div class="validation">
+            <div>
+                <p class="count" style="color:#393E41">Valid Emails: <span id="validEmailCount"></span></p>
+                <div id="validEmails" style="float: left"></div>
+            </div>
+            <div>
+                <p class="count" style="color:#393E41">Invalid Emails: <span id="invalidEmailCount"></span></p>
+                <div id="invalidEmails" style="float: left"></div>
+            </div>
+        </div>
+      </div>
+      </section>
+      
+  </div>
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
